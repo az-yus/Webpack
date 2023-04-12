@@ -1,0 +1,16 @@
+.question 
+	.container 
+		.question-grid 
+			.question__content
+				h4.question__title заказать Консультацию специалиста
+				p.question__text Заполните форму и мы свяжемся с вами в ближайшее время!
+				form.form(action="mailto:akiroaraiii@mail.ru", enctype="text/plain")
+					.form__wrap 
+						input(type="text" name="username" placeholder="Ваше имя" required)
+						input(type="text" name="usermail" placeholder="Ваша почта" required)
+					textarea(name="userquestion" placeholder="Ваше сообщение" required).form__question
+					.form__checkbox  
+						input(type="checkbox" id="formcheckbox" name="usercheckbox" required).form__checkbox-input
+						label(for="formcheckbox") Я согласен с условиями обработки персональных данных
+					button(type="submit").form__btn Отправить
+			img.question__img(src=require("../images/form.png?as=webp"), alt="")

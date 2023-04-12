@@ -1,0 +1,134 @@
+@use '../common/common';
+
+.works {
+	margin: 80px 0;
+	.container {
+		@include common.container;
+	}
+	.works-grid {
+		@include common.d-grid;
+	}
+	&__title {
+		font-family: common.$manrope;
+		color: common.$blackTxt;
+		font-weight: 700;
+		font-size: 38px;
+		line-height: 48px;
+		grid-column: span 12;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+	}
+
+	.carousel {
+		grid-column: span 10/12;
+		background: common.$whiteBlock;
+		padding: 10px 0;
+		box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+		border-radius: 15px;
+		background: common.$whiteBlock;
+	}
+	.works__content-logo {
+		width: max-content;
+		margin: 20px 0 20px 25px;
+
+		@media(max-width:common.$lg){
+			margin: 0 auto;
+		}
+	}
+	.carousel-item {
+		transition: all 1s !important;
+	}
+	.works__content-text {
+		font-family: common.$manrope;
+		color: common.$blackTxt;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 26px;
+		margin-bottom: 20px;
+		margin-left: 25px;
+
+		@media(max-width:common.$lg){
+			text-align: center;
+			margin: 0;
+			font-size: 16px;
+		}
+	}
+	.carousel-control-prev-icon,
+	.carousel-control-next-icon {
+		background-color: black;
+	}
+	.carousel-control-prev,
+	.carousel-control-next {
+		width: auto;
+	}
+	&__resulte {
+		padding: 25px;
+		background: #F3F1FE;	
+		&-title {
+			font-family: common.$manrope;
+			color: common.$blackTxt;
+			font-weight: 800;
+			text-transform: uppercase;
+			font-size: 24px;
+			line-height: 26px;
+			margin-bottom: 10px;
+		}
+		&-wrap {
+			display: flex;
+			justify-content: space-between;
+
+			@media(max-width:common.$md){
+				flex-direction: column;
+			}
+
+			& span {
+				font-family: common.$manrope;
+				color: common.$blackTxt;
+				font-weight: 800;
+				font-size: 18px;
+				line-height: 26px;
+			}
+
+			& p {
+				font-family: common.$manrope;
+				color: common.$blackTxt;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 26px;
+			}
+		}
+	}
+	&__system {
+		display: flex;
+		flex-direction: column;
+		margin: 25px 0 0 25px;
+
+		@media(max-width:common.$lg){
+			align-items: center;
+		}
+		@media(max-width:common.$sm){
+			
+		}
+
+		&-title {
+			font-family: common.$manrope;
+			color: common.$blackTxt;
+			font-weight: 800;
+			text-transform: uppercase;
+			font-size: 24px;
+			line-height: 26px;
+			margin-bottom: 10px;
+		}
+		&-wrap {
+			display: flex;
+
+			@media(max-width:common.$sm){
+				flex-direction: column;
+			}
+
+			& img {
+				width: max-content;
+			}
+		}
+	}
+}

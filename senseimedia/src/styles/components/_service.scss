@@ -1,0 +1,157 @@
+@use '../common/common';
+
+.service {
+	margin: 50px 0 70px;
+	.container {
+		@include common.container;
+	}
+	.d-grid {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		grid-row: auto;
+		justify-content: center;
+
+		@media(max-width: common.$lg){
+			@include common.d-grid;
+		}
+	}
+	&__title {
+		color: common.$blackTxt;
+		font-size: 38px;
+		line-height: 48px;
+		margin-bottom: 40px;
+		font-family: common.$manrope;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@media(max-width: common.$lg){
+			text-align: center;
+			margin-bottom: 0px;
+		}
+	}
+	&__block {
+		grid-column: span 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 5px;
+
+		&:nth-child(4) {
+			display: flex;
+			@media(max-width: common.$lg){
+				grid-column: span 4/7;
+			}
+			@media(max-width: common.$sm){
+				grid-column: span 10/12;
+			}
+
+		}
+
+		@media(max-width: common.$lg){
+			grid-column: span 4;
+			margin-top: 40px;
+		}
+
+		@media(max-width: common.$sm){
+			grid-column: span 10/12;
+		}
+	}
+	&__card {
+		// box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+		border-radius: 15px;
+		background: common.$whiteBlock;
+		border-radius: 15px;
+		width: 100%;
+
+		&-wrap {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 303px;
+
+			@media(max-width: common.$xl) {
+				height: 330px;
+			}
+
+			@media(max-width: common.$sm){
+				height: 270px;
+			}
+		}
+		&-title {
+			color: common.$whiteTxt;
+			font-family: common.$manrope;
+			font-size: 18px;
+			line-height: 26px;
+			font-weight: 800;
+			padding: 11px 0;
+			text-transform: uppercase;
+			background: common.$gayBg;
+			border-top-right-radius: 15px;
+			border-top-left-radius: 15px;
+			height: 74px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+
+		&-list {
+			margin: 18px 0 0 16px;
+		}
+		&-list li {
+			color: common.$blackTxt;
+			font-family: common.$manrope;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 7px;
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+		}
+	}
+	&__btn {
+		@extend %btn;
+		margin: 20px auto 0;
+		width: max-content;
+	}
+	&__icon {
+		background: linear-gradient(115.11deg, #F32C6D 10.12%, #CB1D95 100.01%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin-right: 5px;
+	}
+	&__price {
+		font-size: 16px;
+		line-height: 24px;
+		font-family: common.$manrope;
+		font-weight: 400;
+		color: common.$blackTxt;
+		padding: 15px 0;
+		text-align: center;
+		position: relative;
+
+		&-line {
+			display: block;
+			width: 96%;
+			height: 2px;
+			background: common.$pinkLG;
+			margin: 0 4px 10px;
+			position: absolute;
+			top: 1px;
+		}
+
+		&-cost {
+			font-family: common.$manrope;
+			font-weight: 800;
+			font-size: 30px;
+			line-height: 34px;
+			background: linear-gradient(115.11deg, #F32C6D 10.12%, #CB1D95 100.01%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+	}
+
+}

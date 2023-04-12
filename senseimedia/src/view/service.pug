@@ -1,0 +1,69 @@
+.service 
+	.container 
+		h3.service__title Наши услуги
+		.d-grid 
+			.service__block 
+				.service__card 
+					p.service__card-title Рекламные материалы
+					.service__card-wrap 
+						- let serviceFirstCard = ['Верстка макетов', 'Флаеры', 'Визитки', 'Брошюры', 'Листовки'];
+						ul.service__card-list 
+							each name in serviceFirstCard 
+								li= name  
+									span.sol.service__icon 
+						.service__price от
+							span.service__price-cost 2000 руб.
+							.service__price-line
+				button.service__btn.btn Подробнее
+			.service__block 
+				.service__card 
+					p.service__card-title бренд <br> дизайн
+					.service__card-wrap 
+						- let serviceSecondCard = ['Логотипы', 'Фирменный стиль', 'Айдентика', 'Концепция бренда', 'Гайдлайн'];
+						ul.service__card-list 
+							each name in serviceSecondCard 
+								li= name  
+									span.sol.service__icon 
+						.service__price от
+							span.service__price-cost 3000 руб.
+							.service__price-line 
+				button.service__btn.btn Подробнее
+			.service__block 
+				.service__card 
+					p.service__card-title дизайн вывесок и рекламы
+					.service__card-wrap 
+						- let serviceThirdCard = ['Дизайн вывесок', 'Фотопривязки', 'Роллапы'];
+						ul.service__card-list 
+							each name in serviceThirdCard 
+								li= name  
+									span.sol.service__icon 
+						.service__price от
+							span.service__price-cost 3000 руб.
+							.service__price-line 
+				button.service__btn.btn Подробнее
+			.service__block 
+				.service__card 
+					p.service__card-title Digital <br> Дизайн
+					.service__card-wrap 
+						- let serviceFourthCard = ['WEB дизайн', 'Креативы для рекламы', 'Презентации'];
+						ul.service__card-list 
+							each name in serviceFourthCard 
+								li= name  
+									span.sol.service__icon 
+						.service__price от
+							span.service__price-cost 5000 руб.
+							.service__price-line 
+				button.service__btn.btn Подробнее
+			.service__block 
+				.service__card 
+					p.service__card-title Smm
+					.service__card-wrap 
+						- let serviceFivthCard = ['Stories Instagram', 'Post instagram', 'Оформление аккаунта', 'Рекламные креативы', 'Оформление группы'];
+						ul.service__card-list 
+							each name in serviceFivthCard 
+								li= name  
+									span.sol.service__icon 
+						.service__price от
+							span.service__price-cost 5000 руб.
+							.service__price-line 
+				button.service__btn.btn Подробнее

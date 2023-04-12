@@ -1,0 +1,121 @@
+@use '../common/common';
+
+.footer {
+	&-start {
+		background: common.$whiteBlock;
+	}
+	.container {
+		@include common.container;
+	}
+	&-grid {
+		@include common.d-grid;
+		padding: 70px 0;
+	}
+	&__logo-content {
+		grid-column: span 4;
+
+		@media(max-width:common.$lg){
+			grid-column: span 6;
+		}
+		@media(max-width:common.$md){
+			grid-column: span 10/12;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 50px;
+		}
+		@media(max-width:common.$sm){
+			grid-column: span 12;
+		}
+	}
+	&__info {
+		grid-column: span 4;
+
+		@media(max-width:common.$lg){
+			grid-column: span 3;
+		}
+		@media(max-width:common.$md){
+			grid-column: span 6;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		@media(max-width:common.$sm){
+			grid-column: span 12;
+		}
+		
+	}
+	&__service {
+		grid-column: span 4;
+
+		@media(max-width:common.$lg){
+			grid-column: span 3;
+		}
+		@media(max-width:common.$md){
+			grid-column: span 6;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		@media(max-width:common.$sm){
+			grid-column: span 12;
+			margin-top: 50px;
+		}
+	}
+	&__title {
+		text-transform: uppercase;
+		color: common.$blackTxt;
+		font-family: common.$manrope;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 36px;
+		margin-bottom: 20px;
+	}
+	&__politic {
+		color: common.$blackTxt;
+		font-family: common.$manrope;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		margin: 20px 0;
+		text-decoration: underline !important;
+		display: block;
+		&:hover {
+			color: common.$blackTxt;
+		}
+	}
+	&__button {
+		@extend %btn;
+	}
+	&__list {
+		padding: 0;
+		margin: 0;
+
+		&-link {
+			color: common.$blackTxt;
+			font-family: common.$manrope;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 24px;
+			display: block;
+			margin-top: 10px;
+
+			@media(max-width:common.$md){
+				text-align: center;
+			}
+		}
+	}
+
+	&-end {
+		background: common.$blackTxt;
+
+		& p {
+			color: common.$whiteTxt;
+			font-family: common.$manrope;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 36px;
+			text-align: center;
+		}
+	}
+}

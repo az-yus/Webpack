@@ -1,0 +1,39 @@
+@forward './common/common';
+@forward './custom';
+@forward './components/header';
+@forward './components/intro';
+@forward './components/info';
+@forward './components/service';
+@forward './components/form';
+@forward './components/works';
+@forward './components/footer';
+
+$carousel-transition-duration: 1s;
+body {
+	background: #F3F1FE;
+}
+
+.pink {
+	background: linear-gradient(115.11deg, #F32C6D 10.12%, #CB1D95 100.01%) !important;
+}
+
+.violet {
+	background: linear-gradient(115.11deg, #9021AC 16.38%, #C8459F 84.56%) !important;
+}
+
+.orange {
+	background: linear-gradient(115.11deg, #FFBC2A 16.38%, #FF4F39 95.45%) !important;
+}
+
+.text-violet {
+	background: linear-gradient(115.11deg, #9021AC 16.38%, #C8459F 84.56%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text
+}
+.text-orange {
+	background: linear-gradient(115.11deg, #FFBC2A 16.38%, #FF4F39 95.45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;	
+}

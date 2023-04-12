@@ -1,0 +1,105 @@
+@use '../common/common';
+
+.info {
+
+	.container{
+		@include common.container;
+	}
+
+	&__content {
+		padding: 40px;
+		background: common.$whiteBlock;
+		box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.08);
+		border-radius: 20px;
+	}
+
+	&__title {
+		font-family: common.$manrope;
+		color: common.$blackTxt;
+		font-size: 38px;
+		line-height: 48px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 35px;
+
+		@media(max-width:common.$lg){
+			text-align: center;
+		}
+
+		@media(max-width:common.$sm){
+			font-size: 25px;
+			line-height: 25px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__grid {
+		@include common.d-grid;
+	}
+
+	&__block {
+		grid-column: span 3;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+
+		@media(max-width:common.$lg){
+			grid-column: span 6;
+			justify-content: center;
+			margin-top: 20px;
+		}
+		@media(max-width:common.$sm){
+			grid-column: span 12;
+			text-align: center;
+		}
+
+		&-title {
+			font-size: 40px;
+			line-height: 48px;
+			font-family: common.$manrope;
+			font-weight: 800;
+			background: linear-gradient(115.11deg, #F32C6D 10.12%, #CB1D95 100.01%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			margin-bottom: 5px;
+
+		}
+
+		&-title span {
+			font-size: 50px;
+
+			@media(max-width:common.$xl){
+				font-size: 35px ;
+			}
+		}
+		&-text {
+			font-family: common.$manrope;
+			color: common.$blackTxt;
+			font-size: 16px;
+			line-height: 26px;
+			font-weight: 500;
+		}
+		&:not(:last-child)::after {
+			content: "";
+			width: 1px;
+			height: 86px;
+			background: #C7C7C7;
+			position: absolute;
+			margin-left: 270px;
+
+			@media(max-width:common.$xl) {
+				display: none;
+			}
+		}
+		&:first-of-type::after {
+			margin-left: 220px;
+		}
+		&:nth-child(3)	{
+			justify-content: center;
+		}
+		&:nth-child(4)	{
+			justify-content: center;
+		}
+	}
+}

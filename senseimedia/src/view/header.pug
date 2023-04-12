@@ -1,0 +1,15 @@
+header.header
+	.container
+		nav.header__nav 
+			a.header__logo(href="#") 
+				span.header__logo-sm sm
+				span.header__logo-line 
+				span.header__logo-text sensei media
+			- let navArr = ["Главная", "Услуги", "Наши работы", "Контакты"];
+			ul.header__list 
+				each el in navArr
+					li
+						a.header__list-link(href="#")= el
+			button.header__btn Заказать звонок
+		div.header__menu 
+			span.header__menu-line

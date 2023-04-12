@@ -1,0 +1,39 @@
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xs: 100%;
+$column: 12;
+$g-side: 15px;
+
+@mixin d-grid($col: $column, $row: auto) {
+	display: grid;
+	grid-template-columns: repeat($col, 1fr);
+	grid-auto-rows: $row;
+}
+
+@mixin media($size: $xl) {
+	@media(max-width: $size){
+		@content;
+	}
+}
+
+@mixin container($pad: $g-side){
+	max-width: $xl;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 $pad;
+
+	@include media($xl) {
+		max-width: $lg;
+	}
+	@include media($lg) {
+		max-width: $md;
+	}
+	@include media($md) {
+		max-width: $sm;
+	}
+	@include media($sm) {
+		max-width: $xs;
+	}
+}

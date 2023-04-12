@@ -1,0 +1,40 @@
+$manrope: 'Manrope';
+
+$manropeObj: (
+	"Light": 300,
+	"Regular": 400,
+	"Medium": 500,
+	"Semibold": 600,
+	"Bold": 700,
+	"Extrabold": 800
+);
+
+@each $name, $weight in $manropeObj {
+	@font-face {
+		font-family: $manrope;
+		src: url(../fonts/manrope/#{$manrope}-#{$name}.ttf);
+		font-weight: $weight;
+	}
+}
+
+@font-face {
+    font-family: 'icon-lig';
+    src: url(/src/fonts/fa-light-300.ttf);
+}
+@font-face {
+    font-family: 'fontawesome-reg';
+    src: url(/src/fonts/fa-brands-400.ttf);
+}
+@font-face {
+    font-family: 'icon-sol';
+    src: url(/src/fonts/fa-solid-900.ttf);
+}
+.reg {
+    font-family: 'fontawesome-reg';
+}
+.lig {
+    font-family: 'icon-lig';
+}
+.sol {
+    font-family: 'icon-sol';
+}

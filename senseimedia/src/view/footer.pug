@@ -1,0 +1,27 @@
+footer.footer
+	.footer-start 
+		.container 
+			.footer-grid 
+				nav.footer__logo-content 
+					a.header__logo(href="#") 
+						span.header__logo-sm sm
+						span.header__logo-line 
+						span.header__logo-text sensei media
+					a.footer__politic(href="#") Политика конфиденциальности
+					button.footer__button Обратная связь
+				nav.footer__info 
+					span.footer__title Информация
+					- let FinfoArr = ["Главная", "Услуги", "Наши работы", "Контакты"];
+					ul.footer__list 
+						each el in FinfoArr
+							li
+								a.footer__list-link(href="#")= el
+				nav.footer__service 
+					span.footer__title  Услуги
+					- let FserArr = ["Реклама в интернете", "Дизайн вывесок и рекламы", "Дизайн сайтов на Тильде", "СММ"];
+					ul.footer__list 
+						each el in FserArr
+							li
+								a.footer__list-link(href="#")= el
+	.footer-end 
+		p © 2021 Все права защиены
